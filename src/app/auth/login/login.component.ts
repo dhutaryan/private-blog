@@ -11,6 +11,7 @@ import { AuthService } from '../auth.service';
 })
 export class LoginComponent implements OnInit {
   loginForm: FormGroup;
+  loading = false;
 
   constructor(
     private formBuilder: FormBuilder,
@@ -29,8 +30,11 @@ export class LoginComponent implements OnInit {
   }
 
   login() {
-    this.authService.login(this.loginForm.value)
+    this.loading = true;
+    this.authService
+      .login(this.loginForm.value)
       .then(() => {
+        this.loading = false;
         this.navigateByDefault();
       });
   }
