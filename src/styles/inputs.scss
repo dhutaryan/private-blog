@@ -1,0 +1,12 @@
+@import 'variables';
+
+.pb-common-input {
+  background-color: $white;
+  border-radius: 3px;
+  border: solid 1px $dusty-gray-01;
+
+  &:focus {
+    outline: none;
+    border: solid 1px $deep-sky-blue
+  }
+}

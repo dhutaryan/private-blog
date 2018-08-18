@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
+
+import { AuthService } from '../auth.service';
 
 @Component({
   selector: 'pb-login',
@@ -6,10 +10,32 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./login.component.scss'],
 })
 export class LoginComponent implements OnInit {
+  loginForm: FormGroup;
 
-  constructor() { }
+  constructor(
+    private formBuilder: FormBuilder,
+    private authService: AuthService,
+    private router: Router,
+  ) { }
 
   ngOnInit() {
+    this.authService.isAuthenticated.subscribe(authenticated =>
+      authenticated && this.navigateByDefault());
+
+    this.loginForm = this.formBuilder.group({
+      email: ['', Validators.required],
+      password: ['', Validators.required],
+    });
   }
 
+  login() {
+    this.authService.login(this.loginForm.value)
+      .then(() => {
+        this.navigateByDefault();
+      });
+  }
+
+  private navigateByDefault() {
+    this.router.navigate(['/']);
+  }
 }

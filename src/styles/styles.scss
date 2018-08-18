@@ -1,11 +1,17 @@
-@import "variables";
+@import 'variables';
+
+@import './inputs';
+@import './buttons';
+@import './links';
+@import './fonts';
 
 html,
 body {
   height: 100%;
   margin: 0;
+  font-family: $neucha;
 }
 
 body {
-  background-color: $snow;
+  background-color: $alice-blue;
 }
