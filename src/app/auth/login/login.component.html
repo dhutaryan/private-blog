@@ -21,12 +21,17 @@
       <div class="password-container">
         <label for="email">Password</label>
         <input
-          type="password"
+          type="{{isTypePassword ? 'password' : 'text'}}"
           class="pb-common-input login-input"
           formControlName="password"
           id="password"
           required
         >
+        <i
+          class="fa fa-lg password-eye-icon"
+          (click)="isTypePassword = !isTypePassword"
+          [ngClass]="{'fa-eye': !isTypePassword, 'fa-eye-slash': isTypePassword}"
+        ></i>
       </div>
       <button
         class="pb-common-btn login-btn"

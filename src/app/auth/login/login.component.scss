@@ -51,6 +51,18 @@
   flex-direction: column;
 }
 
+.password-container {
+  position: relative;
+
+  .password-eye-icon {
+    position: absolute;
+    right: 10px;
+    top: 42px;
+    opacity: 0.3;
+    cursor: pointer;
+  }
+}
+
 .login-title {
   font-size: 30px;
   align-self: center;
