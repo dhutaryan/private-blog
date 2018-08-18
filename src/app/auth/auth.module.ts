@@ -5,6 +5,7 @@ import { AngularFireAuthModule } from 'angularfire2/auth';
 import { AuthRoutingModule } from './auth.routing';
 
 import { LoginComponent } from './login/login.component';
+import { LogoutComponent } from './logout/logout.component';
 
 @NgModule({
   imports: [
@@ -15,6 +16,7 @@ import { LoginComponent } from './login/login.component';
   ],
   declarations: [
     LoginComponent,
+    LogoutComponent,
   ],
   exports: [LoginComponent],
 })

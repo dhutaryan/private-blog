@@ -22,4 +22,8 @@ export class AuthService {
       .auth
       .signInWithEmailAndPassword(email, password);
   }
+
+  logout() {
+    return this.firebaseAuth.auth.signOut();
+  }
 }
