@@ -1,0 +1,28 @@
+@import 'variables';
+@import './fonts';
+
+.pb-common-btn {
+  height: 44px;
+  width: 100%;
+  padding: 0;
+  background-color: $deep-sky-blue-06;
+  color: $white;
+  font-size: 18px;
+  font-weight: 600;
+  font-family: $neucha;
+  outline: none;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $deep-sky-blue;
+  }
+
+  &[disabled],
+  &[disabled]:hover {
+    background-color: $deep-sky-blue-06;
+    cursor: default;
+    opacity: 0.3;
+  }
+}

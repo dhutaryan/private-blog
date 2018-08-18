@@ -1,0 +1,10 @@
+@import 'variables';
+
+.pb-common-link {
+  color: $deep-sky-blue;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}

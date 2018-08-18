@@ -1,0 +1,37 @@
+<div class="auth">
+  <span class="auth-logo">Private Blog</span>
+  <div class="auth-container">
+    <form
+      class="login-form"
+      [formGroup]="loginForm"
+      (ngSubmit)="login()"
+    >
+      <div class="login-title">Log In</div>
+      <div class="login-container">
+        <label for="email">Email</label>
+        <input
+          type="email"
+          class="pb-common-input login-input"
+          formControlName="email"
+          id="email"
+          email
+          required
+        >
+      </div>
+      <div class="password-container">
+        <label for="email">Password</label>
+        <input
+          type="password"
+          class="pb-common-input login-input"
+          formControlName="password"
+          id="password"
+          required
+        >
+      </div>
+      <button class="pb-common-btn login-btn">Log In</button>
+    </form>
+  </div>
+  <div class="auth-question">
+    Don't have own blog? <a routerLink="/signup" class="pb-common-link">Register now!</a>
+  </div>
+</div>
