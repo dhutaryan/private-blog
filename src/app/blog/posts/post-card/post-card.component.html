@@ -1,0 +1,11 @@
+<div class="post">
+  <div class="post-title">
+    {{post.title}}
+  </div>
+  <div class="post-date">
+    <div class="date">{{post.createdAt.toDate() | dateFormat:'LL'}}</div>
+  </div>
+  <div class="post-description">
+    {{post.description}}
+  </div>
+</div>
