@@ -18,6 +18,5 @@ import { LogoutComponent } from './logout/logout.component';
     LoginComponent,
     LogoutComponent,
   ],
-  exports: [LoginComponent],
 })
 export class AuthModule { }
