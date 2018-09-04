@@ -4,6 +4,7 @@ import { BlogRoutingModule } from './blog.routing';
 import { PostsModule } from './posts/posts.module';
 
 import { BlogComponent } from './blog.component';
+import { NavigationMenuComponent } from './navigation-menu/navigation-menu.component';
 
 @NgModule({
   imports: [
@@ -13,6 +14,7 @@ import { BlogComponent } from './blog.component';
   ],
   declarations: [
     BlogComponent,
+    NavigationMenuComponent,
   ],
 })
 export class BlogModule { }

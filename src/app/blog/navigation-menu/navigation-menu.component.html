@@ -1,0 +1,28 @@
+<div class="navbar">
+  <div class="navbar-content">
+    <div class="navbar-logo">
+      Private Blog
+    </div>
+    <div class="navbar-list">
+      <div class="navbar-items" routerLink="">
+        <div
+          class="item"
+          *ngFor="let item of items"
+          routerLink="{{item.link}}"
+          routerLinkActive="active"
+          [routerLinkActiveOptions]="{exact: true}"
+        >
+          {{item.title}}
+        </div>
+      </div>
+      <div class="navbar-user">
+        <div
+          class="item logout"
+          routerLink="/logout"
+        >
+          Log Out
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

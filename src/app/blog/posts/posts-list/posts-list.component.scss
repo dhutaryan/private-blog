@@ -3,12 +3,12 @@
   grid-template-columns: 100%;
   grid-gap: 10px;
   margin: 0 10px;
-  padding-top: 20px;
+  padding-top: 80px;
 }
 
 @media screen and (min-width: 1200px) {
   .posts-list {
-    grid-template-columns: repeat(2, 590px);
+    grid-template-columns: repeat(2, 595px);
     max-width: 1200px;
     margin: 0 auto;
   }
