@@ -1,0 +1,40 @@
+.add-post {
+  margin: 0 10px;
+  padding-top: 80px;
+}
+
+.title-container,
+.description-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.add-post-input,
+.add-post-area {
+  height: 44px;
+  margin-bottom: 20px;
+  margin-top: 5px;
+  padding-left: 5px;
+}
+
+label,
+.add-post-input,
+.add-post-area {
+  font-size: 18px;
+}
+
+.add-post-area {
+  height: 280px;
+}
+
+.pb-common-btn {
+  margin-bottom: 10px;
+}
+
+@media screen and (min-width: 1200px) {
+  .add-post {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+}
