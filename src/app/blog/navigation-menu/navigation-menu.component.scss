@@ -1,0 +1,136 @@
+@import 'variables';
+
+.navbar {
+  position: fixed;
+  width: 100%;
+  height: 60px;
+  background: $white;
+  color: $mine-shaft;
+  border-bottom: 1px solid $deep-sky-blue;
+  z-index: 100;
+}
+
+.humb {
+  display: inline-block;
+}
+
+.navbar-overlay {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: $alice-blue;
+  overflow-x: hidden;
+  transition: 0.5s;
+
+  .close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+}
+
+.overlay-content {
+  position: relative;
+  top: 25%;
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.overlay-link {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 36px;
+  display: block;
+  transition: 0.3s;
+  color: $mine-shaft;
+
+  &:hover,
+  &.active {
+    color: $deep-sky-blue;
+  }
+}
+
+.navbar-content {
+  display: flex;
+  height: inherit;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 10px;
+}
+
+.navbar-logo {
+  display: none;
+}
+
+.navbar-list {
+  display: none;
+}
+
+.navbar-user {
+  display: none;
+}
+
+.item {
+  width: fit-content;
+  font-size: 20px;
+  padding: 20px 10px;
+  text-align: center;
+  vertical-align: middle;
+  border-left: 1px solid $black-01;
+
+  &:last-child {
+    border-right: 1px solid $black-01;
+  }
+
+  &.active:hover,
+  &:hover {
+    cursor: pointer;
+    color: $deep-sky-blue;
+  }
+
+  &.active {
+    color: $deep-sky-blue;
+  }
+}
+
+.logout {
+  color: $crimson;
+
+  &:hover {
+    color: $crimson;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .navbar-content {
+    margin: 0 auto;
+  }
+
+  .humb {
+    display: none;
+  }
+
+  .navbar-logo {
+    display: block;
+    font-size: 30px;
+    padding-right: 60px;
+  
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  .navbar-list {
+    display: flex;
+    justify-content: space-between;
+    flex-grow: 1;
+  }
+
+  .navbar-user {
+    display: flex;
+  }
+}

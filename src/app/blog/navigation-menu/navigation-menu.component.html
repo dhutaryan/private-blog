@@ -1,0 +1,47 @@
+<div class="navbar">
+  <div class="navbar-content">
+    <i class="fa fa-lg fa-align-justify humb" (click)="isSidebarVisible = true"></i>
+    <div class="navbar-overlay" [style.width]="isSidebarVisible ? '100%': 0">
+      <i class="fa fa-2x fa-times close-btn" (click)="isSidebarVisible = false"></i>
+      <div
+        class="overlay-content"
+        *ngFor="let item of items"
+      >
+        <a
+          class="overlay-link"
+          routerLink="{{item.link}}"
+          routerLinkActive="active"
+          [routerLinkActiveOptions]="{exact: true}"
+          (click)="isSidebarVisible = false"
+        >
+          {{item.title}}
+        </a>
+        <a class="overlay-link logout">Log Out</a>
+      </div>
+    </div>
+    <div class="navbar-logo">
+      Private Blog
+    </div>
+    <div class="navbar-list">
+      <div class="navbar-items" routerLink="">
+        <div
+          class="item"
+          *ngFor="let item of items"
+          routerLink="{{item.link}}"
+          routerLinkActive="active"
+          [routerLinkActiveOptions]="{exact: true}"
+        >
+          {{item.title}}
+        </div>
+      </div>
+      <div class="navbar-user">
+        <div
+          class="item logout"
+          routerLink="/logout"
+        >
+          Log Out
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
