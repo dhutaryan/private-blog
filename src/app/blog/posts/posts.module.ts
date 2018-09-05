@@ -7,6 +7,7 @@ import { PostCardComponent } from './post-card/post-card.component';
 import { PostsListComponent } from './posts-list/posts-list.component';
 import { DateFormatPipe } from './post-card/date-format.pipe';
 import { AddPostComponent } from './add-post/add-post.component';
+import { PostDetailsComponent } from './post-details/post-details.component';
 
 @NgModule({
   imports: [
@@ -19,6 +20,7 @@ import { AddPostComponent } from './add-post/add-post.component';
     PostCardComponent,
     DateFormatPipe,
     AddPostComponent,
+    PostDetailsComponent,
   ],
 })
 export class PostsModule { }

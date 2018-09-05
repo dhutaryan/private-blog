@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { AngularFirestore } from 'angularfire2/firestore';
+import { AngularFirestore, DocumentChangeAction } from 'angularfire2/firestore';
+import { map } from 'rxjs/operators';
 
 import { Post } from './post.model';
 import { AuthService } from '../../auth/auth.service';
@@ -18,7 +19,21 @@ export class PostsService {
         ref => ref.where('ownerId', '==', this.authService.getCurrentUser().uid)
           .orderBy('createdAt', 'desc'),
       )
-      .valueChanges();
+      .snapshotChanges()
+      .pipe(
+        map((actions: DocumentChangeAction<Post>[]) => {
+          return actions.map((post: DocumentChangeAction<Post>) => {
+            const data: Post = post.payload.doc.data();
+            const id = post.payload.doc.id;
+
+            return { id, ...data };
+          });
+        }),
+      );
+  }
+
+  getPost(id: string): Observable<Post> {
+    return this.db.doc<Post>(`posts/${id}`).valueChanges();
   }
 
   addPost({ title, description }) {

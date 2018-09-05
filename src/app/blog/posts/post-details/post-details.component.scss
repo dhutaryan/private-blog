@@ -1,0 +1,43 @@
+@import 'variables';
+@import '../../../../styles/fonts';
+
+.post-details {
+  margin: 0 10px;
+  padding-top: 80px;
+}
+
+.post-title {
+  font-size: 24px;
+}
+
+.post-date {
+  position: relative;
+  border-top: 1px solid $deep-sky-blue;
+  margin-top: 10px;
+}
+
+.date {
+  position: relative;
+  width: fit-content;
+  padding: 0 5px;
+  top: -7px;
+  left: 25px;
+  font-size: 14px;
+  text-align: center;
+  background: $alice-blue;
+}
+
+.post-description {
+  font-size: 18px;
+  font-family: $open-sans-condensed;
+  text-align: justify;
+  line-height: 1.5em;
+  white-space: pre-line;
+}
+
+@media screen and (min-width: 1200px) {
+  .post-details {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+}
