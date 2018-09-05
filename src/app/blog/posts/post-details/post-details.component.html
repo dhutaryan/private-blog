@@ -1,0 +1,13 @@
+<div class="post-details">
+  <div class="post-title">
+    {{(post$ | async)?.title}}
+  </div>
+  <div class="post-date">
+    <div class="date">
+        {{(post$ | async)?.createdAt.toDate() | dateFormat:'LL'}}
+    </div>
+  </div>
+  <div class="post-description">
+      {{(post$ | async)?.description}}
+  </div>
+</div>
