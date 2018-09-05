@@ -3,4 +3,5 @@ export interface Post {
   description: string;
   createdAt: Date;
   updatedAt: Date;
+  ownerId: string;
 }

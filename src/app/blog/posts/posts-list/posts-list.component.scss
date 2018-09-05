@@ -1,15 +1,37 @@
+.posts {
+  padding-top: 80px;
+  padding-bottom: 20px;
+}
+
+.posts-actions,
+.posts-list {
+  margin: 0 10px;
+}
+
+.posts-actions {
+  display: flex;
+  justify-content: flex-end;
+}
+
 .posts-list {
   display: grid;
   grid-template-columns: 100%;
   grid-gap: 10px;
-  margin: 0 10px;
-  padding-top: 80px;
+  padding-top: 20px;
+}
+
+.add-post {
+  width: 100px;
 }
 
 @media screen and (min-width: 1200px) {
+  .posts-actions,
   .posts-list {
-    grid-template-columns: repeat(2, 595px);
     max-width: 1200px;
     margin: 0 auto;
+  }
+
+  .posts-list {
+    grid-template-columns: repeat(2, 595px);
   }
 }

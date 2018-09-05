@@ -1,12 +1,11 @@
 @import 'variables';
 @import './fonts';
 
-.pb-common-btn {
+.pb-common-btn,
+.pb-danger-btn {
   height: 44px;
   width: 100%;
   padding: 0;
-  background-color: $deep-sky-blue-06;
-  color: $white;
   font-size: 18px;
   font-weight: 600;
   font-family: $neucha;
@@ -14,6 +13,11 @@
   border: none;
   border-radius: 3px;
   cursor: pointer;
+}
+
+.pb-common-btn {
+  background-color: $deep-sky-blue-06;
+  color: $white;
 
   &:hover {
     background-color: $deep-sky-blue;
@@ -22,6 +26,22 @@
   &[disabled],
   &[disabled]:hover {
     background-color: $deep-sky-blue-06;
+    cursor: default;
+    opacity: 0.5;
+  }
+}
+
+.pb-danger-btn {
+  background-color: $crimson-06;
+  color: $white;
+
+  &:hover {
+    background-color: $crimson;
+  }
+
+  &[disabled],
+  &[disabled]:hover {
+    background-color: $crimson-06;
     cursor: default;
     opacity: 0.5;
   }

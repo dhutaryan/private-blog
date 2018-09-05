@@ -20,4 +20,18 @@ export class PostsService {
       )
       .valueChanges();
   }
+
+  addPost({ title, description }) {
+    const createdAt = new Date();
+    const updatedAt = new Date();
+    const ownerId = this.authService.getCurrentUser().uid;
+
+    return this.db.collection<Post>('posts').add({
+      title,
+      description,
+      createdAt,
+      updatedAt,
+      ownerId,
+    });
+  }
 }
