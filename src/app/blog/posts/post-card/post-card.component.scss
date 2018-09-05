@@ -21,9 +21,6 @@
     bottom: 0;
     background: $deep-sky-blue;
     height: 4px;
-    transition-property: right;
-    transition-duration: 0.5s;
-    transition-timing-function: ease-out;
   }
 
   &:hover:before, &:focus:before, &:active:before {
