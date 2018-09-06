@@ -2,8 +2,22 @@
 @import '../../../../styles/fonts';
 
 .post-details {
+  display: flex;
+  flex-direction: column;
   margin: 0 10px;
   padding-top: 80px;
+}
+
+.post-actions {
+  display: flex;
+  max-width: 320px;
+  width: 100%;
+  align-self: flex-end;
+  padding-bottom: 20px;
+}
+
+.delete-post {
+  margin-left: 10px;
 }
 
 .post-title {

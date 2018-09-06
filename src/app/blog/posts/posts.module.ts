@@ -2,6 +2,9 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { ReactiveFormsModule } from '@angular/forms';
+import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { DialogModule } from 'primeng/dialog';
 
 import { PostCardComponent } from './post-card/post-card.component';
 import { PostsListComponent } from './posts-list/posts-list.component';
@@ -14,6 +17,9 @@ import { PostDetailsComponent } from './post-details/post-details.component';
     CommonModule,
     RouterModule,
     ReactiveFormsModule,
+    BrowserModule,
+    BrowserAnimationsModule,
+    DialogModule,
   ],
   declarations: [
     PostsListComponent,
