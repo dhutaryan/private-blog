@@ -1,0 +1,23 @@
+body.overrides .ui-dialog .ui-dialog-footer {
+  border: 0;
+}
+
+body.overrides .ui-dialog .ui-dialog-content {
+  border: none;
+  padding: 20px;
+  font-size: 18px;
+}
+
+body.overrides .ui-dialog .ui-dialog-footer p-footer {
+  display: flex;
+}
+
+body.overrides .ui-dialog .ui-dialog-footer button {
+  width: 100%;
+}
+
+body.overrides .ui-dialog {
+  max-width: 600px;
+  width: 100%;
+  padding: 0 5px;
+}

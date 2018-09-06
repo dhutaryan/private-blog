@@ -49,4 +49,8 @@ export class PostsService {
       ownerId,
     });
   }
+
+  deletePost(id) {
+    return this.db.doc(`posts/${id}`).delete();
+  }
 }

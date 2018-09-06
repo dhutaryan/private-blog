@@ -2,7 +2,8 @@
 @import './fonts';
 
 .pb-common-btn,
-.pb-danger-btn {
+.pb-danger-btn,
+.pb-common-outline-btn {
   height: 44px;
   width: 100%;
   padding: 0;
@@ -42,6 +43,24 @@
   &[disabled],
   &[disabled]:hover {
     background-color: $crimson-06;
+    cursor: default;
+    opacity: 0.5;
+  }
+}
+
+.pb-common-btn.outline {
+  border: 1px solid $deep-sky-blue-06;
+  background-color: $white;
+  color: $deep-sky-blue-06;
+
+  &:hover {
+    color: $white;
+    background-color: $deep-sky-blue;
+  }
+
+  &[disabled],
+  &[disabled]:hover {
+    background-color: $deep-sky-blue-06;
     cursor: default;
     opacity: 0.5;
   }
