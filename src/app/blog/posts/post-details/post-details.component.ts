@@ -14,6 +14,7 @@ export class PostDetailsComponent implements OnInit {
   post$: Observable<Post>;
   postId = this.activatedRoute.snapshot.paramMap.get('id');
   loading = false;
+  isVisible = false;
 
   constructor(
     private postsService: PostsService,

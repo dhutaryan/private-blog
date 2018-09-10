@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./navigation-menu.component.scss'],
 })
 export class NavigationMenuComponent implements OnInit {
+  isSidebarVisible = false;
   items = [
     {
       title: 'Posts',

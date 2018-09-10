@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 
 import { PostsService } from '../posts.service';
-import { Post } from '../post.model';
+import { PostId } from '../post.model';
 
 @Component({
   selector: 'pb-posts-list',
@@ -10,7 +10,7 @@ import { Post } from '../post.model';
   styleUrls: ['./posts-list.component.scss'],
 })
 export class PostsListComponent implements OnInit {
-  posts$: Observable<Post[]>;
+  posts$: Observable<PostId[]>;
 
   constructor(private postsService: PostsService) { }
 
@@ -18,7 +18,7 @@ export class PostsListComponent implements OnInit {
     this.posts$ = this.getPosts();
   }
 
-  getPosts(): Observable<Post[]> {
+  getPosts(): Observable<PostId[]> {
     return this.postsService.getPostsList();
   }
 

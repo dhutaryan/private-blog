@@ -1,9 +1,10 @@
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { AngularFirestore, DocumentChangeAction } from 'angularfire2/firestore';
+import { firestore } from 'firebase';
 import { map } from 'rxjs/operators';
 
-import { Post } from './post.model';
+import { Post, PostId } from './post.model';
 import { AuthService } from '../../auth/auth.service';
 
 @Injectable({
@@ -13,7 +14,7 @@ export class PostsService {
 
   constructor(private db: AngularFirestore, private authService: AuthService) {}
 
-  getPostsList(): Observable<Post[]> {
+  getPostsList(): Observable<PostId[]> {
     return this.db
       .collection<Post>('posts',
         ref => ref.where('ownerId', '==', this.authService.getCurrentUser().uid)
@@ -37,8 +38,8 @@ export class PostsService {
   }
 
   addPost({ title, description }) {
-    const createdAt = new Date();
-    const updatedAt = new Date();
+    const createdAt = firestore.Timestamp.now();
+    const updatedAt = firestore.Timestamp.now();
     const ownerId = this.authService.getCurrentUser().uid;
 
     return this.db.collection<Post>('posts').add({
