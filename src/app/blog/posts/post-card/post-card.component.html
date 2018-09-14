@@ -5,7 +5,5 @@
   <div class="post-date">
     <div class="date">{{post.createdAt.toDate() | dateFormat:'LL'}}</div>
   </div>
-  <div class="post-description">
-    {{post.description}}
-  </div>
+  <div class="post-description" [innerHTML]="post.description"></div>
 </div>
