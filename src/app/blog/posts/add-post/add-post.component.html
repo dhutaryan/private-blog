@@ -1,5 +1,5 @@
 <div class="add-post">
-  <form [formGroup]="addPostForm" (ngSubmit)="addPost()">
+  <form [formGroup]="addPostForm" (ngSubmit)="submit()">
     <div class="title-container">
       <label for="title">Title</label>
       <input
@@ -24,8 +24,8 @@
       [class.loading]="loading"
       [disabled]="loading || !addPostForm.valid"
     >
-      Add Post
+      {{ postId ? 'Edit' : 'Add'}} Post
     </button>
   </form>
-  <button class="pb-danger-btn" [routerLink]="['/posts']">Cancel</button>
+  <button class="pb-danger-btn" [routerLink]="[postId ? '/posts/' + postId : '/posts']">Cancel</button>
 </div>

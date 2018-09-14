@@ -16,6 +16,7 @@ const routes: Routes = [
     children: [
       { path: '', component: PostsListComponent },
       { path: 'create', component: AddPostComponent },
+      { path: 'edit/:id', component: AddPostComponent },
       { path: ':id', component: PostDetailsComponent },
     ],
   },

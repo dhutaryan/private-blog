@@ -1,6 +1,6 @@
 <div class="post-details">
   <div class="post-actions">
-    <button class="pb-common-btn">Edit Post</button>
+    <button class="pb-common-btn" [routerLink]="['/posts/edit/' + postId]">Edit Post</button>
     <p-dialog
       [(visible)]="isVisible"
       [responsive]="false"

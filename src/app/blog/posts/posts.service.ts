@@ -51,6 +51,14 @@ export class PostsService {
     });
   }
 
+  editPost(postId, { title, description }) {
+    const updatedAt = firestore.Timestamp.now();
+
+    return this.db.collection<Post>('posts')
+      .doc(postId)
+      .update({ title, description, updatedAt });
+  }
+
   deletePost(id) {
     return this.db.doc(`posts/${id}`).delete();
   }
