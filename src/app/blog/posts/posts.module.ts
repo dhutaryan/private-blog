@@ -5,6 +5,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DialogModule } from 'primeng/dialog';
+import { PostsRoutingModule } from './posts.routing';
 
 import { PostCardComponent } from './post-card/post-card.component';
 import { PostsListComponent } from './posts-list/posts-list.component';
@@ -20,6 +21,7 @@ import { PostDetailsComponent } from './post-details/post-details.component';
     BrowserModule,
     BrowserAnimationsModule,
     DialogModule,
+    PostsRoutingModule,
   ],
   declarations: [
     PostsListComponent,

@@ -1,12 +1,12 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-import { BlogComponent } from './blog.component';
-import { PostsListComponent } from './posts/posts-list/posts-list.component';
-import { AddPostComponent } from './posts/add-post/add-post.component';
-import { PostDetailsComponent } from './posts/post-details/post-details.component';
+import { BlogComponent } from '../blog.component';
+import { PostsListComponent } from './posts-list/posts-list.component';
+import { AddPostComponent } from './add-post/add-post.component';
+import { PostDetailsComponent } from './post-details/post-details.component';
 
-import { AuthGuard } from '../auth/auth.guard';
+import { AuthGuard } from '../../auth/auth.guard';
 
 const routes: Routes = [
   {
@@ -26,4 +26,4 @@ const routes: Routes = [
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule],
 })
-export class BlogRoutingModule { }
+export class PostsRoutingModule { }

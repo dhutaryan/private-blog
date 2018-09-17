@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { BlogRoutingModule } from './blog.routing';
+import { RouterModule } from '@angular/router';
 import { PostsModule } from './posts/posts.module';
 
 import { BlogComponent } from './blog.component';
@@ -9,8 +9,8 @@ import { NavigationMenuComponent } from './navigation-menu/navigation-menu.compo
 @NgModule({
   imports: [
     CommonModule,
-    BlogRoutingModule,
     PostsModule,
+    RouterModule,
   ],
   declarations: [
     BlogComponent,
