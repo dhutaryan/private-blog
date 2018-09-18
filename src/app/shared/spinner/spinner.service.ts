@@ -14,4 +14,8 @@ export class SpinnerService {
   disable() {
     this.active$.next(false);
   }
+
+  isActivated(): BehaviorSubject<boolean> {
+    return this.active$;
+  }
 }

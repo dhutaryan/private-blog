@@ -1,4 +1,4 @@
-<div class="spinner-container" *ngIf="spinner.active$ | async">
+<div class="spinner-container" *ngIf="spinner.isActivated() | async">
   <div class="spinner">
     <div class="cube1 cube"></div>
     <div class="cube2 cube"></div>

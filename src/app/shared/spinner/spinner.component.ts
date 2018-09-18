@@ -8,6 +8,6 @@ import { SpinnerService } from './spinner.service';
 })
 export class SpinnerComponent {
 
-  constructor(private spinner: SpinnerService) { }
+  constructor(public spinner: SpinnerService) { }
 
 }
