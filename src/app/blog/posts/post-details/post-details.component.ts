@@ -4,6 +4,8 @@ import { Observable } from 'rxjs';
 
 import { Post } from '../post.model';
 import { PostsService } from '../posts.service';
+import { SpinnerService } from '../../../shared/spinner/spinner.service';
+import { tap } from 'rxjs/operators';
 
 @Component({
   selector: 'pb-post-details',
@@ -20,10 +22,15 @@ export class PostDetailsComponent implements OnInit {
     private postsService: PostsService,
     private activatedRoute: ActivatedRoute,
     private router: Router,
+    private spinner: SpinnerService,
   ) { }
 
   ngOnInit() {
-    this.post$ = this.postsService.getPost(this.postId);
+    this.spinner.enable();
+    this.post$ = this.postsService.getPost(this.postId)
+      .pipe(
+        tap(() => this.spinner.disable()),
+      );
   }
 
   deletePost() {
